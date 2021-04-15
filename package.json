@@ -1,0 +1,22 @@
+{
+  "name": "02-nodejs-am-noytesapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migueled/NodeJS-02-NoteApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/migueled/NodeJS-02-NoteApp/issues"
+  },
+  "homepage": "https://github.com/migueled/NodeJS-02-NoteApp#readme",
+  "dependencies": {
+    "validator": "^13.5.2"
+  }
+}
