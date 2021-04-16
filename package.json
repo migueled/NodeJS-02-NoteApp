@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/migueled/NodeJS-02-NoteApp#readme",
   "dependencies": {
+    "chalk": "^2.4.1",
     "validator": "^13.5.2"
   }
 }
