@@ -1,29 +1,43 @@
-/*
-Challenge: Use the chalk library in you project
-    1.- Install version 2.4.1 of chalk
-    2.- Lood chalk info app.js
-    3.- Use it to print the string "Success" to the console in green
-    4.- Test your work
-
-    Bonus: Use docs to mess around with other styles. Make text bold and inversed
-*/
-
 const chalk = require( 'chalk' );
 const yargs = require( 'yargs' );
 
-/*const msg = 'Success';
-const styleMsg = chalk.white.bold.bgGreen( msg );
+//-- customize yargs version
+yargs.version( '1.1.0' );
 
-console.log( styleMsg );*/
-/*---------------------------------------------*/
+//--Create add command
+yargs.command({
+    command :   'add',
+    describe:   'Add a new note',
+    handler:    () => console.log( 'Adding a new note!' )
+});
 
-console.log( process.argv );
+//-- Create remove command
+yargs.command({
+    command : 'remove',
+    describe: 'Remove a note',
+    handler : () => console.log( 'Removing thr note' )
+});
+
+/*
+Challenge: Add two new commands
+    1.- Setup command to support 'list' command ( print placeholder message for new)
+    2.- Setup command to support 'read' command ( print placeholder message for new)
+    3.- Test your work by running both commands and ensure correct output
+*/
+
+//Create list command
+yargs.command({
+    command : 'list',
+    describe: 'List you notes',
+    handler : () => console.log( 'Listing out all note' )
+});
+
+//Create read command
+yargs.command({
+    command : 'read',
+    describe: 'Read a note',
+    handler : () => console.log( 'Reading a note' )
+});
+
+//--Add , Remove , Read , List
 console.log( yargs.argv );
-//const command = process.argv[2];
-
-/*if ( command === 'add' ) {
-    console.log( chalk.white.bold.bgGreen( 'Adding note!' ));
-} else if ( command === 'remove' ) {
-    console.log( chalk.white.bold.bgRed( 'Removing note!' ));
-}*/
-
