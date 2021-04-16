@@ -8,8 +8,9 @@ Challenge: Use the chalk library in you project
     Bonus: Use docs to mess around with other styles. Make text bold and inversed
 */
 
-const chalk = require('chalk');
- 
+const chalk = require( 'chalk' );
+const yargs = require( 'yargs' );
+
 /*const msg = 'Success';
 const styleMsg = chalk.white.bold.bgGreen( msg );
 
@@ -17,11 +18,12 @@ console.log( styleMsg );*/
 /*---------------------------------------------*/
 
 console.log( process.argv );
-const command = process.argv[2];
+console.log( yargs.argv );
+//const command = process.argv[2];
 
-if ( command === 'add' ) {
+/*if ( command === 'add' ) {
     console.log( chalk.white.bold.bgGreen( 'Adding note!' ));
 } else if ( command === 'remove' ) {
     console.log( chalk.white.bold.bgRed( 'Removing note!' ));
-}
+}*/
 
