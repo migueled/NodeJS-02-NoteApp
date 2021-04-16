@@ -10,7 +10,18 @@ Challenge: Use the chalk library in you project
 
 const chalk = require('chalk');
  
-const msg = 'Success';
+/*const msg = 'Success';
 const styleMsg = chalk.white.bold.bgGreen( msg );
 
-console.log( styleMsg );
+console.log( styleMsg );*/
+/*---------------------------------------------*/
+
+console.log( process.argv );
+const command = process.argv[2];
+
+if ( command === 'add' ) {
+    console.log( chalk.white.bold.bgGreen( 'Adding note!' ));
+} else if ( command === 'remove' ) {
+    console.log( chalk.white.bold.bgRed( 'Removing note!' ));
+}
+
