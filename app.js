@@ -11,6 +11,6 @@ Challenge: Use the chalk library in you project
 const chalk = require('chalk');
  
 const msg = 'Success';
-const styleMsg = chalk.black.bold.bgGreen( msg );
+const styleMsg = chalk.white.bold.bgGreen( msg );
 
 console.log( styleMsg );
