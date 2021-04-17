@@ -14,9 +14,9 @@ const addNote  = ( title , body ) => {
             body  : body
         });
         saveNotes( notes );
-        console.log( chalk.black.bold.bgGreen( 'New note add' ) );
+        console.log( chalk.green.inverse( 'New note add' ) );
     } else {
-        console.log( chalk.black.bold.bgRed( 'Note title taken!' ) );
+        console.log( chalk.red.inverse( 'Note title taken!' ) );
     }
 };
 
@@ -34,8 +34,25 @@ const loadNotes = () => {
         return [];
     }
 };
+/*Remove*/
+const removeNote = ( title ) => {
+    const notes = loadNotes();
+    if( notes.length > 0 ){
+        const filterNotes = notes.filter( (note ) => note.title !== title );
+        if( notes.length !== filterNotes.length ){
+            saveNotes( filterNotes );
+            console.log( chalk.green.inverse( 'Note removed' ) );
+        } else {
+            console.log( chalk.red.inverse( 'No note found' ) );
+        }
+    } else {
+        console.log( chalk.red.inverse( 'No notes add' ) );
+    }
+    
+};
 
 module.exports = {
     getNotes : getNotes,
-    addNote  : addNote
+    addNote  : addNote,
+    removeNote : removeNote
 };
