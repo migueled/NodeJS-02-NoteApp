@@ -2,8 +2,10 @@ const fs    = require( 'fs' );
 const chalk = require( 'chalk' );
 
 const addNote  = ( title , body ) => {
-    notes = loadNotes();
+    const notes = loadNotes();
     const duplicateNote = notes.find( ( note ) => note.title === title );
+
+    debugger
 
     if( !duplicateNote ) {
         notes.push({
